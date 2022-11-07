@@ -1,0 +1,1401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1" created="3.40.0" activeEnvironment="Default environment" name="Activities" resourceRoot="" updated="" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="d259 wadlVersion="http://wadl.dev.java.net/2009/02" name="https://petstore.swagger.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://petstore.swagger.io</con:endpoint>
+    </con:endpoints>
+    <con:resource name="User" path="/v2/user" id="">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="User" id="" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>username</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>password</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:user="https://petstore.swagger.io/v2/user">user:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="" mediaType="application/json" postQueryString="false">
+          <con:settings/>
+          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="password" value="JohnPassword"/>
+            <con:entry key="username" value="JohnDoe"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>username</con:entry>
+            <con:entry>password</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Login" path="/v2/user/login" id=">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Login" id="" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>username</con:name>
+            <con:value>{username}</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>{username}</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>password</con:name>
+            <con:value>{password}</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>{password}</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:log="https://petstore.swagger.io/v2/user/login">log:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="password" value="{password}"/>
+            <con:entry key="username" value="{username}"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>username</con:entry>
+            <con:entry>password</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Username" path="/v2/user/{username}" id=">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Username" id=" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>username</con:name>
+            <con:value>username</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>username</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:user="https://petstore.swagger.io/v2/user/username">user:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:user="https://petstore.swagger.io/v2/user/username">user:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id=" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="username" value="username"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>username</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+      <con:method name="Username 2" id="" method="DELETE">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>username</con:name>
+            <con:value>username</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>username</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:joh="https://petstore.swagger.io/v2/user/JohnDoe">joh:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://petstore.swagger.io/v2/user/JohnDoe</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="username" value="JohnDoe"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>username</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Logout" path="/v2/user/logout" id="">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Logout" id="" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:log="https://petstore.swagger.io/v2/user/logout">log:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/v2/pet/findByStatus?status=sold" path="" id="f>
+      <con:settings/>
+      <con:parameters/>
+      <con:resource name="/v2/pet/findByStatus?status=sold" path="/v2/pet/findByStatus" id="987824e3-124b-4715-9da3-db1242269e5b">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="/v2/pet/findByStatus?status=sold" id="" method="GET">
+          <con:settings/>
+          <con:parameters>
+            <con:parameter required="true">
+              <con:name>status</con:name>
+              <con:value>{username}</con:value>
+              <con:style>QUERY</con:style>
+              <con:default>{username}</con:default>
+              <con:path xsi:nil="true"/>
+              <con:description xsi:nil="true"/>
+            </con:parameter>
+          </con:parameters>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:log="https://petstore.swagger.io/v2/user/login">log:Response</con:element>
+          </con:representation>
+          <con:request name="Request 1" id="" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/pet/findByStatus</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="status" value="sold"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>status</con:entry>
+            </con:parameterOrder>
+          </con:request>
+        </con:method>
+      </con:resource>
+    </con:resource>
+    <con:resource name="http://ipwhois.app/json/{IP}" path="" id="">
+      <con:settings/>
+      <con:parameters/>
+      <con:resource name="http://ipwhois.app/json/{IP}" path="/json/{IP}" id="">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>IP</con:name>
+            <con:value>IP</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>IP</con:default>
+          </con:parameter>
+        </con:parameters>
+        <con:method name="ipwhois.app" id="" method="GET">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:log="https://petstore.swagger.io/v2/user/login">log:Response</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>text/html</con:mediaType>
+            <con:status>404</con:status>
+            <con:params/>
+            <con:element>html</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json; charset=utf-8</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:log="https://petstore.swagger.io/v2/user/login">log:Response</con:element>
+          </con:representation>
+          <con:request name="Request 1" id=" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://ipwhois.app</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder>
+              <con:entry>IP</con:entry>
+            </con:parameterOrder>
+          </con:request>
+        </con:method>
+      </con:resource>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id=" name="Activities">
+    <con:settings>
+      <con:setting id="IncludeOverview">true</con:setting>
+      <con:setting id="IncludeResults">true</con:setting>
+      <con:setting id="FlowLayout">false</con:setting>
+      <con:setting id="ErrorDetails">true</con:setting>
+      <con:setting id="IncludeCoverage">true</con:setting>
+    </con:settings>
+    <con:runType>PARALLELL</con:runType>
+    <con:testCase id=" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Activity-1 UserProject" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Post Create User" id="1">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user" methodName="User" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Post Create User" id=" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request>{
+    "id": 1,
+    "username": "testuser",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@doe.com",
+    "password": "testuser",
+    "phone": "234567890",
+    "userStatus": 0
+}</con:request>
+            <con:originalUri>https://petstore.swagger.io/v2/user</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="password" value=""/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>password</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Get Login" id="2>
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user/login" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Get Login" id="" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/login</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="password" value="JohnPassword"/>
+              <con:entry key="username" value="JohnDoe"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>password</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Get Info" id="">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user/{username}" methodName="Username" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Get Info" id=" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/username</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id=" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="username" value="testuser"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Get Logout" id="0b3d0dce-2246-44bb-84fe-a6f8dab1a05e">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user/logout" methodName="Logout" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Get Logout" id="" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/logout</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Delete" id=">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user/{username}" methodName="Username 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Delete" id="" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/JohnDoe</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="username" value="testuser"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id=" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Activity-2 JSON ASSERTION" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Get Login" id="">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/json/{IP}" methodName="ipwhois.app" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Get Login" id=" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/login</con:originalUri>
+            <con:assertion type="JsonPath Match" id="" name="JSONPath Match">
+              <con:configuration>
+                <path>$[1].['id']</path>
+                <content>9223372036854029452</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes" id="
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="password" value="JohnPassword"/>
+              <con:entry key="username" value="JohnDoe"/>
+              <con:entry key="status" value="sold"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>password</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id=" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Activity-4 DATA DRIVEN TEST" searchProperties="true" timeout="0">
+      <con:settings>
+        <con:setting id="IncludeOverview">true</con:setting>
+        <con:setting id="IncludeResults">true</con:setting>
+        <con:setting id="FlowLayout">false</con:setting>
+        <con:setting id="ErrorDetails">true</con:setting>
+        <con:setting id="IncludeCoverage">true</con:setting>
+      </con:settings>
+      <con:testStep type="datasource" name="DataSource" id=">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="File">
+            <con:configuration>
+              <fileName>C:/Users/000E38744/IdeaProjects/FST_API/Activity4DataDriven.txt</fileName>
+              <separator>,</separator>
+              <trim>false</trim>
+              <charset>Cp1252</charset>
+              <quotedValues>false</quotedValues>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>Address</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Activity4 Data Source" id="b>
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/json/{IP}" methodName="ipwhois.app" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Activity4 Data Source" id="" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://ipwhois.app</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/login</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes" id=">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="" name="JSONPath Match">
+              <con:configuration>
+                <path>$['country']}</path>
+                <content>United States</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="password" value="JohnPassword"/>
+              <con:entry key="IP" value="${DataSource#Address}"/>
+              <con:entry key="username" value="JohnDoe"/>
+              <con:entry key="status" value="sold"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>password</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="Data Source Loop" id="">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>Activity4 Data Source</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Activity-5  DATA DRIVEN TEST-2" searchProperties="true" timeout="0">
+      <con:settings>
+        <con:setting id="IncludeOverview">true</con:setting>
+        <con:setting id="IncludeResults">true</con:setting>
+        <con:setting id="FlowLayout">false</con:setting>
+        <con:setting id="ErrorDetails">true</con:setting>
+        <con:setting id="IncludeCoverage">true</con:setting>
+      </con:settings>
+      <con:testStep type="datasource" name="Data Source" id="8d27256c-08b2-4d35-8e63-e22f7bcfa7d1">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Data Generator">
+            <con:configuration>
+              <generatedDataCount>10</generatedDataCount>
+              <generatorsTotalNumber>1</generatorsTotalNumber>
+              <lastSelectedProperty>-1</lastSelectedProperty>
+              <GeneratorType0>COMP</GeneratorType0>
+              <PropertyName0>IP</PropertyName0>
+              <repetitionCountIP>0</repetitionCountIP>
+              <repeatValuesIP>false</repeatValuesIP>
+              <ComputerAddressTypeIP>IPv4</ComputerAddressTypeIP>
+              <escapeSpaceSequence/>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>IP</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Activity5 Data Source2" id="">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/json/{IP}" methodName="ipwhois.app" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Activity5 Data Source2" id="" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://ipwhois.app</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/login</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes" id=">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="0" name="JSONPath Match">
+              <con:configuration>
+                <path>$['country']}</path>
+                <content>${Activity5 Data Source2#Response#$['country']}</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="password" value="JohnPassword"/>
+              <con:entry key="IP" value="${Data Source#IP}"/>
+              <con:entry key="username" value="JohnDoe"/>
+              <con:entry key="status" value="sold"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>password</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="Data Sink_Activity5" id="e">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="File">
+            <con:configuration>
+              <fileName>C:/Users/000E38744/IdeaProjects/FST_API/Datasink_Activity5.csv.txt</fileName>
+              <separator>,</separator>
+              <escape>"</escape>
+              <quote>true</quote>
+              <trim>true</trim>
+              <append>true</append>
+              <encoding>Cp1252</encoding>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>'country</con:name>
+              <con:value>${Activity5 Data Source2#Response#$['country']}</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="Data Source Loop" id="9792adfe-cdfb-4e57-90e6-75035971c9eb">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>Data Source</dataSourceStep>
+          <targetStep>Activity5 Data Source2</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="2" id="">
+        <con:settings/>
+        <con:config>
+          <delay>5000</delay>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Activity-6  JDBC" searchProperties="true" timeout="0" maxResults="5" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="">
+      <con:settings>
+        <con:setting id="IncludeOverview">true</con:setting>
+        <con:setting id="IncludeResults">true</con:setting>
+        <con:setting id="FlowLayout">false</con:setting>
+        <con:setting id="ErrorDetails">true</con:setting>
+        <con:setting id="IncludeCoverage">true</con:setting>
+      </con:settings>
+      <con:testStep type="datasource" name="Data Source" id="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Data Generator">
+            <con:configuration>
+              <generatedDataCount>10</generatedDataCount>
+              <generatorsTotalNumber>1</generatorsTotalNumber>
+              <lastSelectedProperty>0</lastSelectedProperty>
+              <GeneratorType0>COMP</GeneratorType0>
+              <PropertyName0>IP</PropertyName0>
+              <repetitionCountIP>0</repetitionCountIP>
+              <repeatValuesIP>false</repeatValuesIP>
+              <ComputerAddressTypeIP>IPv4</ComputerAddressTypeIP>
+              <escapeSpaceSequence/>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>IP</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Activity6 jdbc" id=">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/json/{IP}" methodName="ipwhois.app" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Activity6 jdbc" id="" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://ipwhois.app</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/login</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes" id=">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="" name="JSONPath Match">
+              <con:configuration>
+                <path>$['country']}</path>
+                <content>United States</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="password" value="JohnPassword"/>
+              <con:entry key="IP" value="${Data Source#IP}"/>
+              <con:entry key="username" value="JohnDoe"/>
+              <con:entry key="status" value="sold"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>password</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Property Transfer" id="3>
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>city</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Activity6 jdbc</con:sourceStep>
+            <con:sourcePath>$['city']</con:sourcePath>
+            <con:targetType>cityName</con:targetType>
+            <con:targetStep>Data Sink_Activity6</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+            <con:name>latitude</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Activity6 jdbc</con:sourceStep>
+            <con:sourcePath>$['latitude']</con:sourcePath>
+            <con:targetType>latitude</con:targetType>
+            <con:targetStep>Data Sink_Activity6</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>longitude</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Activity6 jdbc</con:sourceStep>
+            <con:sourcePath>$['longitude']</con:sourcePath>
+            <con:targetType>longitude</con:targetType>
+            <con:targetStep>Data Sink_Activity6</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="Data Sink_Activity6" id="">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="JDBC">
+            <con:configuration>
+              <driver>com.mysql.jdbc.Driver</driver>
+              <connstr>jdbc:mysql://remotemysql.com:3306/CGpfjlbstY?user=CGpfjlbstY&amp;password=PASS_VALUE</connstr>
+              <pass>Sav3dVDTJ4</pass>
+              <Connection>&lt;None></Connection>
+              <query>insert into coordinates(cityName,latitude,longitude) values (?,?,?);</query>
+              <stored-procedure>false</stored-procedure>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>cityName</con:name>
+              <con:value>San Antonio</con:value>
+            </con:property>
+            <con:property>
+              <con:name>latitude</con:name>
+              <con:value>29.4241219</con:value>
+            </con:property>
+            <con:property>
+              <con:name>longitude</con:name>
+              <con:value>-98.4936282</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="Data Source Loop" id="">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>Data Source</dataSourceStep>
+          <targetStep>Activity5 Data Source2</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="2" id="">
+        <con:settings/>
+        <con:config>
+          <delay>5000</delay>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+/
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:loadUiTest name="Activity-1 UserProject LoadTest" id="">
+    <con:settings>
+      <con:setting id="soapUIObjectSourceId"></con:setting>
+      <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_TestCase</con:setting>
+    </con:settings>
+    <con1:loadui-project id="" label="Activity-1 UserProject LoadTest" xmlns:con1="http://eviware.com/loadui/config">
+      <con1:properties>
+        <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+        <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="ModelItem.saveReport" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/>
+        <con1:property propagates="true" key="Temporary project" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property>
+        <con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">PerScenario</con1:property>
+        <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.id" type="java.lang.String">9</con1:property>
+      </con1:properties>
+      <con1:attributes/>
+      <con1:addons/>
+      <con1:scene label="New Scenario" id="">
+        <con1:properties>
+          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+          <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
+          <con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
+          <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
+        </con1:properties>
+        <con1:attributes/>
+        <con1:addons/>
+        <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="" category="Scheduler">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
+            <con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property>
+            <con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">true</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 1" id="" category="Generators">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="limitVU" type="java.lang.Long">25</con1:property>
+            <con1:property propagates="true" key="load" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Fixed Load</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Activities:Activity-1 UserProject" id="" category="Runners">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">/con1:property>
+            <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
+            <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase"></con1:property>
+            <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
+            <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:connection outputTerminalId=" inputTerminalId="1/stateTerminal"/>
+        <con1:connection outputTerminalId="/triggerTerminal" inputTerminalId="/triggerTerminal"/>
+        <con1:connection outputTerminalId="0runningTerminal" inputTerminalId="/Sample Count"/>
+      </con1:scene>
+      <con1:statistics>
+        <con1:page title="DefaultLoadUIStatisticPage"/>
+      </con1:statistics>
+    </con1:loadui-project>
+    <con:loadUITestScenario projectId="" scenarioId="" name="New Scenario" id="">
+      <con:settings/>
+    </con:loadUITestScenario>
+    <con:reportParameters/>
+  </con:loadUiTest>
+  <con:loadUiTest name="Activity-2 JSON ASSERTION LoadTest" id=">
+    <con:settings>
+      <con:setting id="soapUIObjectSourceId">b/con:setting>
+      <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_TestCase</con:setting>
+    </con:settings>
+    <con1:loadui-project id="" label="Activity-2 JSON ASSERTION LoadTest" xmlns:con1="http://eviware.com/loadui/config">
+      <con1:properties>
+        <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+        <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="ModelItem.saveReport" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/>
+        <con1:property propagates="true" key="Temporary project" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property>
+        <con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">PerScenario</con1:property>
+        <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.id" type="java.lang.String">/con1:property>
+      </con1:properties>
+      <con1:attributes/>
+      <con1:addons/>
+      <con1:scene label="New Scenario" id="">
+        <con1:properties>
+          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+          <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
+          <con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
+          <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
+        </con1:properties>
+        <con1:attributes/>
+        <con1:addons/>
+        <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="" category="Scheduler">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
+            <con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property>
+            <con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">true</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 1" id="" category="Generators">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="limitVU" type="java.lang.Long">25</con1:property>
+            <con1:property propagates="true" key="load" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Fixed Load</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Activities:Activity-2 JSON ASSERTION" id="" category="Runners">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long"></con1:property>
+            <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
+            <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">/con1:property>
+            <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
+            <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:connection outputTerminalId="7outgoingTerminal" inputTerminalId="0stateTerminal"/>
+        <con1:connection outputTerminalId="0/triggerTerminal" inputTerminalId="/triggerTerminal"/>
+        <con1:connection outputTerminalId="/runningTerminal" inputTerminalId="/Sample Count"/>
+      </con1:scene>
+      <con1:statistics>
+        <con1:page title="DefaultLoadUIStatisticPage"/>
+      </con1:statistics>
+    </con1:loadui-project>
+    <con:loadUITestScenario projectId="8fa66078-c050-4484-89a1-adda281f087a" scenarioId="2" name="New Scenario" id="f8">
+      <con:settings/>
+    </con:loadUITestScenario>
+    <con:reportParameters/>
+  </con:loadUiTest>
+  <con:loadUiTest name="Activity-4 DATA DRIVEN TEST LoadTest" id="">
+    <con:settings>
+      <con:setting id="soapUIObjectSourceId"></con:setting>
+      <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_TestCase</con:setting>
+    </con:settings>
+    <con1:loadui-project id="" label="Activity-4 DATA DRIVEN TEST LoadTest" xmlns:con1="http://eviware.com/loadui/config">
+      <con1:properties>
+        <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+        <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="ModelItem.saveReport" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/>
+        <con1:property propagates="true" key="Temporary project" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property>
+        <con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">PerScenario</con1:property>
+        <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.id" type="java.lang.String">2a088f9b-bee9-473e-91db-c1309da4a380</con1:property>
+      </con1:properties>
+      <con1:attributes/>
+      <con1:addons/>
+      <con1:scene label="New Scenario" id="">
+        <con1:properties>
+          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+          <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
+          <con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
+          <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
+        </con1:properties>
+        <con1:attributes/>
+        <con1:addons/>
+        <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="2 category="Scheduler">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
+            <con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property>
+            <con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">true</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 1" id="d
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="limitVU" type="java.lang.Long">25</con1:property>
+            <con1:property propagates="true" key="load" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Fixed Load</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Activities:Activity-4 DATA DRIVEN TEST" id=" category="Runners">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">/con1:property>
+            <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
+            <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase"></con1:property>
+            <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
+            <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:connection outputTerminalId="outgoingTerminal" inputTerminalId="stateTerminal"/>
+        <con1:connection outputTerminalId="triggerTerminal" inputTerminalId="/triggerTerminal"/>
+        <con1:connection outputTerminalId="59946aa3-dba2-4650-b9b8-b6d1e4b8415d/runningTerminal" inputTerminalId="df373c1f-f54d-4ea8-85e3-a0b71d7ba6dd/Sample Count"/>
+      </con1:scene>
+      <con1:statistics>
+        <con1:page title="DefaultLoadUIStatisticPage"/>
+      </con1:statistics>
+    </con1:loadui-project>
+    <con:loadUITestScenario projectId="" scenarioId="" name="New Scenario" id=">
+      <con:settings/>
+    </con:loadUITestScenario>
+    <con:reportParameters/>
+  </con:loadUiTest>
+  <con:loadUiTest name="Activity-5  DATA DRIVEN TEST-2 LoadTest" id="5a053dcb-6032-4a62-9a7a-a73a3ce626b8">
+    <con:settings>
+      <con:setting id="soapUIObjectSourceId"></con:setting>
+      <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_TestCase</con:setting>
+    </con:settings>
+    <con1:loadui-project id="6" label="Activity-5  DATA DRIVEN TEST-2 LoadTest" xmlns:con1="http://eviware.com/loadui/config">
+      <con1:properties>
+        <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+        <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="ModelItem.saveReport" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/>
+        <con1:property propagates="true" key="Temporary project" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property>
+        <con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">PerScenario</con1:property>
+        <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.id" type="java.lang.String">5a053dcb-6032-4a62-9a7a-a73a3ce626b8</con1:property>
+      </con1:properties>
+      <con1:attributes/>
+      <con1:addons/>
+      <con1:scene label="New Scenario" id="">
+        <con1:properties>
+          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+          <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
+          <con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
+          <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
+        </con1:properties>
+        <con1:attributes/>
+        <con1:addons/>
+        <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="" category="Scheduler">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
+            <con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property>
+            <con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">true</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 1" id="" category="Generators">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="limitVU" type="java.lang.Long">25</con1:property>
+            <con1:property propagates="true" key="load" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Fixed Load</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Activities:Activity-5  DATA DRIVEN TEST-2" id="527eedab-baaf-4819-9acc-16adee629fbb" category="Runners">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long"></con1:property>
+            <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
+            <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase"></con1:property>
+            <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
+            <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:connection outputTerminalId="/outgoingTerminal" inputTerminalId="c/stateTerminal"/>
+        <con1:connection outputTerminalId="triggerTerminal" inputTerminalId="5/triggerTerminal"/>
+        <con1:connection outputTerminalId="5/runningTerminal" inputTerminalId="/Sample Count"/>
+      </con1:scene>
+      <con1:statistics>
+        <con1:page title="DefaultLoadUIStatisticPage"/>
+      </con1:statistics>
+    </con1:loadui-project>
+    <con:loadUITestScenario projectId="67" scenarioId="b" name="New Scenario" id="3">
+      <con:settings/>
+    </con:loadUITestScenario>
+    <con:reportParameters/>
+  </con:loadUiTest>
+  <con:loadUiTest name="Activity-6  JDBC LoadTest" id="b0b">
+    <con:settings>
+      <con:setting id="soapUIObjectSourceId"></con:setting>
+      <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_TestCase</con:setting>
+    </con:settings>
+    <con1:loadui-project id="" label="Activity-6  JDBC LoadTest" xmlns:con1="http://eviware.com/loadui/config">
+      <con1:properties>
+        <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+        <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="ModelItem.saveReport" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/>
+        <con1:property propagates="true" key="Temporary project" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property>
+        <con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">PerScenario</con1:property>
+        <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.id" type="java.lang.String"></con1:property>
+      </con1:properties>
+      <con1:attributes/>
+      <con1:addons/>
+      <con1:scene label="New Scenario" id="7d0b26c5-e74e-4474-a141-a735bda060f0">
+        <con1:properties>
+          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+          <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
+          <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
+        </con1:properties>
+        <con1:attributes/>
+        <con1:addons/>
+        <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="" category="Scheduler">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
+            <con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property>
+            <con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">true</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 1" id="b" category="Generators">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="limitVU" type="java.lang.Long">25</con1:property>
+            <con1:property propagates="true" key="load" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Fixed Load</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="Activities:Activity-6  JDBC" id="25" category="Runners">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9</con1:property>
+            <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
+            <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">b</con1:property>
+            <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
+            <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:connection outputTerminalId="/outgoingTerminal" inputTerminalId="/stateTerminal"/>
+        <con1:connection outputTerminalId="/triggerTerminal" inputTerminalId="/triggerTerminal"/>
+        <con1:connection outputTerminalId="/runningTerminal" inputTerminalId="/Sample Count"/>
+      </con1:scene>
+      <con1:statistics>
+        <con1:page title="DefaultLoadUIStatisticPage">
+          <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="" groupType="Monitors">
+            <con1:attributes>
+              <con1:property key="GroupId"></con1:property>
+            </con1:attributes>
+          </con1:chartGroup>
+        </con1:page>
+      </con1:statistics>
+    </con1:loadui-project>
+    <con:loadUITestScenario projectId="4" scenarioId="" name="New Scenario" id="a">
+      <con:settings/>
+    </con:loadUITestScenario>
+    <con:loadUIPanelData id="bc205384-840d-46c4-86b2-060b12102ec8">
+      <con:panel>Log</con:panel>
+    </con:loadUIPanelData>
+    <con:reportParameters/>
+  </con:loadUiTest>
+  <con:tags/>
+</con:soapui-project>
